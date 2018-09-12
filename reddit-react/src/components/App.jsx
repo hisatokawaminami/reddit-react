@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import SideBar from './SideBar';
 import PostList from './PostList';
-
+import PostForm from './PostForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
@@ -29,7 +29,7 @@ class App extends Component {
 
         <Switch>
           <Route exact path='/' render={()=><PostList postList={this.state.masterPostList}/>} />
-          <Route path='/newpost' render={()=><PostControl onNewPost ={this.handleAddingNewPostToList} />} />
+          <Route path='/newpost' render={()=><PostForm onNewPost ={this.handleAddingNewPostToList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
