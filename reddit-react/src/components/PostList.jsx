@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function PostList(props){
   return (
     <div>
-      {props.PostList.map((post, index)=>
+      {props.postList.map((post, index)=>
         <Post
           title={post.title}
           imageURL={post.imageURL}
@@ -17,7 +17,7 @@ function PostList(props){
 }
 
 PostList.propTypes = {
-  PostList: PropTypes.array
+  postList: PropTypes.array
 };
 
 export default PostList;

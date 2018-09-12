@@ -28,7 +28,7 @@ class App extends Component {
         <SideBar />
 
         <Switch>
-          <Route exact path='/' render={()=><PostList PostList={this.state.masterPostList}/>} />
+          <Route exact path='/' render={()=><PostList postList={this.state.masterPostList}/>} />
           <Route path='/newpost' render={()=><PostControl onNewPost ={this.handleAddingNewPostToList} />} />
           <Route component={Error404} />
         </Switch>
